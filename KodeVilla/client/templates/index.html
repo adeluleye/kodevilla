@@ -75,6 +75,33 @@
 								Sign up from the form below and you'll be one of the first to know when the site is ready.
 							</p>
 						</div>
+
+
+
+
+						<div id="getting-started"></div>
+						<script type="text/javascript">
+							$("#getting-started")
+							.countdown("2015/03/20", function(event) {
+								// $(this).text(
+								// 	event.strftime('%D days %H %M:%S')
+								// 	);
+								// $('.days-wrapper').text(
+								// 	event.strftime('%D'));
+
+								$('.timer').countdown("2015/03/20", function(event) {
+									$(this).find('.days').text(event.offset.totalDays);
+									$(this).find('.hours').text(event.offset.hours);
+									$(this).find('.minutes').text(event.offset.minutes);
+									$(this).find('.seconds').text(event.offset.seconds);
+								});
+
+
+
+								
+							});
+						</script>
+
 						<div class="timer wow fadeInUp">
 							<div class="days-wrapper">
 								<span class="days"></span> <br><span class="t-text">days</span>
@@ -89,6 +116,11 @@
 								<span class="seconds"></span> <br><span class="t-text">seconds</span>
 							</div>
 						</div>
+
+
+
+
+
 						<div class="subscribe wow fadeInUp text-center">
 							<!-- <form class="form-inline" role="form" action="http://azmind.com/premium/marco/v1-5/layout-6/assets/subscribe.php" method="post">
 								<div class="form-group">
@@ -426,7 +458,7 @@
 			<div class="row">
 				<div class="col-sm-12 footer-copyright">
 					<!-- &copy; KodeVilla by <a href="http://azmind.com/">Azmind</a>. -->
-					&copy; KodeVilla
+					&copy;<img src="/kodevilla.png" style="width: 207px;">
 				</div>
 			</div>
 		</div>

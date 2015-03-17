@@ -1,6 +1,10 @@
 .col-md-2{
 	margin-top: 30px;
-	margin-left: -10px;
+	margin-left: 17px;;
+}
+.text-center {
+	text-align: center;
+	margin-left: 160px;
 }
 body {
 	font-family: 'Roboto', sans-serif;

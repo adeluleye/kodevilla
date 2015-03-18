@@ -52,8 +52,8 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a class="scroll-link" href="#features">The project</a></li>
-						<li><a class="scroll-link" href="#how-it-works">How it'll work</a></li>
+						<!-- <li><a class="scroll-link" href="#features">The project</a></li> -->
+						<!-- <li><a class="scroll-link" href="#how-it-works">How it'll work</a></li> -->
 						<!-- <li><a class="scroll-link" href="#about-us">About</a></li> -->
 						<!-- <li><a class="scroll-link" href="#testimonials">Testimonials</a></li> -->
 					</ul>
@@ -134,7 +134,7 @@
 								{{> afQuickField name="email" placeholder="Enter your email..." class="subscribe-email form-control" id="subscribe-email"}}
 							</div>
 							<div class="col-md-2">
-								<button type="submit" class="btn pull-right">Subscribe</button>
+								<button type="submit" id="submit" class="btn pull-right">Subscribe</button>
 							</div>
 							{{/autoForm}}
 							<div class="success-message"></div>
@@ -209,7 +209,7 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-12 section-bottom-button wow fadeInUp">
-					<a class="btn btn-link-1 scroll-link" href="#top-content">Subscribe</a>
+					<a class="btn btn-link-1 scroll-link" id="subscribe1" >Subscribe</a>
 				</div>
 			</div>
 		</div>
@@ -265,7 +265,7 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-12 section-bottom-button wow fadeInUp">
-					<a class="btn btn-link-1 scroll-link" href="#top-content">Subscribe</a>
+					<a class="btn btn-link-1 scroll-link" id="subscribe2">Subscribe</a>
 				</div>
 			</div>
 		</div>
@@ -286,7 +286,7 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-12 section-bottom-button wow fadeInUp">
-					<a class="btn btn-link-1 scroll-link" href="#top-content">Subscribe Now</a>
+					<a class="btn btn-link-1 scroll-link" id="subscribe3">Subscribe Now</a>
 				</div>
 			</div>
 		</div>

@@ -12,6 +12,8 @@ Router.configure({
 });
 
 // ============================================== routes ========================================================================
+// route to sign-in page
+
 
 //  route one basic
 Router.route ('/', function(){
@@ -21,6 +23,7 @@ Router.route ('/', function(){
   layoutTemplate:"index"
 
 });
+
 Router.route ('/allmails', function(){
 	this.render('allmails');
 	
@@ -33,14 +36,19 @@ Router.route ('/allmails', function(){
 		}
 	}
 });
+
+
 //  route one basic
 Router.route ('/home', function(){
 	this.render('home');
 	
 }, {
+	onBeforeAction: function () {
+      AccountsEntry.signInRequired(this);
+    },
 	name: 'home',
 	data: function(){
-
+        
 		return {
 			projects: Projects.find().fetch()
 		}

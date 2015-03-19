@@ -42,7 +42,19 @@ Router.route ('/home', function(){
 	data: function(){
 
 		return {
-			project: Projects.find().fetch()
+			projects: Projects.find().fetch()
+		}
+	}
+});
+Router.route('/projects/:category/', function(){
+	this.render('projectsCategory');          // Render the same template as '/projects' route
+}, {
+	name: 'projectsCategory',
+
+	data: function(){
+		return {                        // Return only documents with the category in the parameters
+			projects: Projects.find({category: this.params.category}).fetch(),
+			pageTitle: 'Category: ' + this.params.category
 		}
 	}
 });

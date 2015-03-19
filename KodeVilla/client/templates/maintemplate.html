@@ -22,23 +22,23 @@
 				<li class="dropdown">
 					<a href="bootstrap-elements.html" data-target="#" class=" navHeading dropdown-toggle " data-toggle="dropdown">Mobile <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Android</a></li>
+						<li><a href="{{pathFor 'projectsCategory' category='android'}}">Android</a></li>
 						<li class="divider"></li>
-						<li><a href="#">iOS</a></li>
+						<li><a href="{{pathFor 'projectsCategory' category='ios'}}">iOS</a></li>
 						<li class="divider"></li>
-						<li><a href="#">Windows</a></li>
+						<li><a href="{{pathFor 'projectsCategory' category='windows'}}">Windows</a></li>
 						<li class="divider"></li>
-						<li><a href="#">Blackberry</a></li>
+						<li><a href="{{pathFor 'projectsCategory' category='blackberry'}}">Blackberry</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
 					<a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Web <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">MeteorJS</a></li>
+						<li><a href="{{pathFor 'projectsCategory' category='meteor'}}">MeteorJS</a></li>
 						<li class="divider"></li>
-						<li><a href="#">Rails</a></li>
+						<li><a href="{{pathFor 'projectsCategory' category='rails'}}">Rails</a></li>
 						<li class="divider"></li>
-						<li><a href="#">PHP</a></li>
+						<li><a href="{{pathFor 'projectsCategory' category='php'}}">PHP</a></li>
 						<!-- <li class="divider"></li>
 						<li><a href="#">Separated link</a></li> -->
 					</ul>
@@ -46,11 +46,11 @@
 				<li class="dropdown">
 					<a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">UI/UX <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Materializecss</a></li>
+						<li><a href="{{pathFor 'projectsCategory' category='materialize'}}">Materializecss</a></li>
 						<li class="divider"></li>
-						<li><a href="#">Jquery UI</a></li>
+						<li><a href="{{pathFor 'projectsCategory' category='jqueryui'}}">Jquery UI</a></li>
 						<li class="divider"></li>
-						<li><a href="#">Bootstrap</a></li>
+						<li><a href="{{pathFor 'projectsCategory' category='boostrap'}}">Bootstrap</a></li>
 						<!-- <li class="divider"></li>
 						<li><a href="#">Separated link</a></li> -->
 					</ul>
@@ -73,23 +73,24 @@
 		</div>
 	</div> -->
 
-	{{#each project}}
-	<div class="card small">
-		<div class="card-image waves-effect waves-block waves-light">
+	{{#each projects}}
+	<div class="col-md-4">
+		<div class="card small">
+			<!-- <div class="card-image waves-effect waves-block waves-light">
 
-			{{#with FS.GetFile 'images' picture}}
-			<img class="activator blg-img" src="{{url}}" alt="">
-			{{/with}}
-
-
-		</div>
-		<div class="card-content">
-			<span class="card-title activator grey-text text-darken-4 webly">{{title}}</span>
-			<p><a class="btn btn-primary btn-lg">View</a></p>
-		</div>
-		<div class="card-reveal">
-			<span class="card-title grey-text text-darken-4">My First Day at Mest <i class="mdi-navigation-close right"></i></span>
-			<p>So MEST, this is me, usually we write compositions of our first day at school -this is more like my first day in the offce. MEST has this part-school-part-work thing going on...</p>
+				{{#with FS.GetFile 'images' picture}}
+				<img class="activator blg-img" src="{{url}}" alt="">
+				{{/with}}
+			</div> -->
+			<div class="card-content">
+				<span class="card-title activator grey-text text-darken-4 webly">{{title}}</span>
+				
+				<p><a class="btn btn-primary btn-lg">View</a></p>
+			</div>
+			<!-- <div class="card-reveal">
+				<span class="card-title grey-text text-darken-4">My First Day at Mest <i class="mdi-navigation-close right"></i></span>
+				<p>So MEST, this is me, usually we write compositions of our first day at school -this is more like my first day in the offce. MEST has this part-school-part-work thing going on...</p>
+			</div> -->
 		</div>
 	</div>
 	{{/each}}

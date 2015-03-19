@@ -47,6 +47,15 @@ Projects.attachSchema(new SimpleSchema({
         }, {
           value: 'php',
           label: 'PHP'
+        }, {
+          value: 'materilize',
+          label: 'Materialize'
+        }, {
+          value: 'jqueryui',
+          label: 'jQueryUI'
+        }, {
+          value: 'bootstrap',
+          label: 'Bootstrap'
         }
         ];
       }

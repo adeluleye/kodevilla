@@ -104,4 +104,20 @@ div.card:hover div.card-reveal{
 .btn-primary:not(.btn-link):not(.btn-flat) {
 	background-color:#FF5740;
 	color: rgba(255, 255, 255, 0.84);
+	border-color: #fff
+}
+.navbar-warning.navbar {
+	background-color: #fff;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	width: 100%;
+	margin-bottom: 20px
+}
+.btn-primary {
+	border-color: #fff
+	color: #fff;
+	background-color: #337ab7;
+
+}
+.col-md-4{
+	width: 320px;
 }

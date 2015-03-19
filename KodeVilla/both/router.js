@@ -6,7 +6,7 @@ loadingTemplate will use a template with loading or a template
 
 */
 Router.configure({
-	// layoutTemplate: 'layout',
+	layoutTemplate: 'maintemplate',
 	// notFoundTemplate: '404',
 	// loadingTemplate: 'loading'
 });
@@ -16,7 +16,10 @@ Router.configure({
 //  route one basic
 Router.route ('/', function(){
 	this.render('index');
-	name: 'index'
+},{
+  name: 'index',                       // name is an arbitrary value. Useful for helpers
+  layoutTemplate:"index"
+
 });
 Router.route ('/allmails', function(){
 	this.render('allmails');
@@ -27,6 +30,19 @@ Router.route ('/allmails', function(){
 
 		return {
 			emails: Emails.find().fetch()
+		}
+	}
+});
+//  route one basic
+Router.route ('/home', function(){
+	this.render('home');
+	
+}, {
+	name: 'home',
+	data: function(){
+
+		return {
+			project: Projects.find().fetch()
 		}
 	}
 });

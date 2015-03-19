@@ -1,0 +1,26 @@
+@font-face {
+	font-family: webly-sleek;
+	src: url(/fonts/weblysleekuil.ttf);
+}
+@font-face {
+	font-family: atlantic-cruise;
+	src: url(/fonts/Atlantic.ttf);
+}
+@font-face {
+	font-family: carl-john;
+	src: url(/fonts/CarlJohn.ttf);
+}
+@font-face {
+	font-family: aubrey;
+	src: url(/fonts/AUBREY1.TTF);
+}
+.webly{
+	font-family: webly-sleek
+}
+.atlantic{
+	font-family: atlantic-cruise
+}
+.aubrey{
+	font-family: aubrey
+}
+

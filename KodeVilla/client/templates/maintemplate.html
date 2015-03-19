@@ -1,0 +1,125 @@
+<template name="maintemplate">
+	<div class="navbar col-md-12 navbar-warning">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><img src="/kodevilla.png"></a>
+		</div>
+		<div class="navbar-collapse collapse navbar-warning-collapse">
+			<div type="button" class="category btn btn-primary btn-lg text-center" data-toggle="modal" data-target="#newprjModal">
+				Upload Project
+			</div>
+			{{>prjUpload}}
+			
+			<!-- <form class="navbar-form navbar-left">
+				<input type="text" class="form-control col-lg-8" placeholder="Search">
+			</form> -->
+			<ul class="nav navbar-nav navbar-right">
+				
+				<li class="dropdown">
+					<a href="bootstrap-elements.html" data-target="#" class=" navHeading dropdown-toggle " data-toggle="dropdown">Mobile <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Android</a></li>
+						<li class="divider"></li>
+						<li><a href="#">iOS</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Windows</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Blackberry</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Web <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">MeteorJS</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Rails</a></li>
+						<li class="divider"></li>
+						<li><a href="#">PHP</a></li>
+						<!-- <li class="divider"></li>
+						<li><a href="#">Separated link</a></li> -->
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">UI/UX <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Materializecss</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Jquery UI</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Bootstrap</a></li>
+						<!-- <li class="divider"></li>
+						<li><a href="#">Separated link</a></li> -->
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<!-- <div class="projects">
+		<div class="row">
+			<div class="col-sm-4 card-holder">
+				<div class="container card android">
+					<h2>Jumbotron</h2>
+					<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+					<p><a class="btn btn-primary btn-lg">Learn more</a></p>
+				</div>
+			</div>
+
+		</div>
+	</div> -->
+
+	{{#each project}}
+	<div class="card small">
+		<div class="card-image waves-effect waves-block waves-light">
+
+			{{#with FS.GetFile 'images' picture}}
+			<img class="activator blg-img" src="{{url}}" alt="">
+			{{/with}}
+
+
+		</div>
+		<div class="card-content">
+			<span class="card-title activator grey-text text-darken-4 webly">{{title}}</span>
+			<p><a class="btn btn-primary btn-lg">View</a></p>
+		</div>
+		<div class="card-reveal">
+			<span class="card-title grey-text text-darken-4">My First Day at Mest <i class="mdi-navigation-close right"></i></span>
+			<p>So MEST, this is me, usually we write compositions of our first day at school -this is more like my first day in the offce. MEST has this part-school-part-work thing going on...</p>
+		</div>
+	</div>
+	{{/each}}
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
+
+</template>
+
+
+<!-- Dropdown Structure -->
+<template name="prjUpload">
+	<div class="modal" id="newprjModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					{{> quickForm collection="Projects" id="ProjectForm" type="insert"}}
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+
+

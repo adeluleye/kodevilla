@@ -8,9 +8,14 @@ meteor-platform
 autopublish
 insecure
 iron:router
-aldeed:autoform
 aldeed:simple-schema
 aldeed:collection2
 sortegam:typicons
 fortawesome:fontawesome
 natestrauser:animate-css
+fezvrasta:bootstrap-material-design
+cfs:gridfs
+cfs:ui
+aldeed:autoform@=4.2.2
+cfs:standard-packages@=0.0.0
+yogiben:autoform-file@=0.2.0

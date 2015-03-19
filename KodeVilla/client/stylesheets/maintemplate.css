@@ -1,0 +1,107 @@
+/*#blogNav{
+	background-color: #fff
+}
+.blgLine{
+	margin-top: 0px;
+	margin-bottom: 20px;
+	border: 2px;
+	border-top: 1px solid #00796b;
+}
+.navHeadings{
+	color: #00796b
+}
+nav .brand-logo {
+	position: absolute;
+	display: inline-block;
+	font-size: 2.1rem;
+	padding: 0;
+	margin-left: 30px;
+	color: #00796b
+}
+nav .brand-logo:hover{
+	text-decoration: none
+}
+
+nav ul a {
+	font-size: 1.5rem;
+	color: #fff;
+	display: inline-block;
+	padding: 0px 15px;
+}
+
+nav ul a:hover {
+	text-decoration: none;
+}
+nav ul a:visited {
+	text-decoration: none;
+}
+nav ul a:active {
+	text-decoration: none;
+}
+
+#brand{
+	font-family: carl-john;
+	font-size: 3.5rem;
+	width: 170px
+}
+nav ul {
+	margin: 0;
+	margin-right: 30px;
+}
+
+
+*/
+body{
+	text-align: left;
+}
+.card-holder{
+	margin: 20px;
+}
+
+body .jumbotron.android{
+	background: #148CFF;
+	color: white;
+}
+
+.navbar-warning.navbar{
+	background-color: #fff;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	width:100%;
+
+
+}
+.row{
+	margin-right: 0px
+}
+.card{
+	width:300px;
+	margin: 20px;
+	text-align: center;
+}
+.navHeading{
+	color: #999999;
+}
+
+.navbar .navbar-nav > li > a {
+	/* color: inherit; */
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color:#009688;
+}
+.navbar .navbar-nav > li > a:hover{
+	color: #FF5722;
+}
+.card .card-content {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+div.card:hover div.card-reveal{
+	display: block;
+}
+.btn-primary:not(.btn-link):not(.btn-flat) {
+	background-color:#FF5740;
+	color: rgba(255, 255, 255, 0.84);
+}

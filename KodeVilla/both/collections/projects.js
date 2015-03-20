@@ -9,9 +9,10 @@ Projects.attachSchema(new SimpleSchema({
   description: {
     type: String,
     label: 'Brief description',
+    max: 180,
     optional: true,
     autoform: {
-      rows: 6
+      rows: 3
     }
   },
   readMe: {

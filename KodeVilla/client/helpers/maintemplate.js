@@ -21,8 +21,8 @@
  	}
  });
 
- Template.maintemplate.events({
- 	'click #submit-close': function (e, t) {
+ Template.prjUpload.events({
+ 	'click #btn-submit': function (e, t) {
     // ...
     // e.preventDefault();
 

@@ -148,7 +148,7 @@ hr {
 	margin-top: 5px;
 }
 .upload{
-	
+
 	margin-left: -180px;
 }
 ul.navbar-nav {
@@ -159,7 +159,7 @@ ul.navbar-nav {
 input[type="text"],
 textarea,
 textarea.form-control {
-	border:solid 1px #ccc;
+	border:solid 1px #FF5722;
 }
 .description{
 	height: 135px;

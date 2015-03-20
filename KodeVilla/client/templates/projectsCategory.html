@@ -1,3 +1,28 @@
 <template name="projectsCategory">
 	<h2 class="webly">{{pageTitile}}</h2>
+	{{#each projects}}
+	<div class="col-md-4">
+		<div class="card small">
+			<!-- <div class="card-image waves-effect waves-block waves-light">
+
+				{{#with FS.GetFile 'images' picture}}
+				<img class="activator blg-img" src="{{url}}" alt="">
+				{{/with}}
+			</div> -->
+			<div class="card-content">
+				<span class="card-title activator grey-text text-darken-4 webly">{{title}}</span>
+				<hr>
+				<div>
+					<p>{{description}}</p>
+				</div>
+				
+				<p><a href="{{pathFor 'details' id='_id'}}" class="btn btn-primary btn-lg">View</a></p>
+			</div>
+			<!-- <div class="card-reveal">
+				<span class="card-title grey-text text-darken-4">My First Day at Mest <i class="mdi-navigation-close right"></i></span>
+				<p>So MEST, this is me, usually we write compositions of our first day at school -this is more like my first day in the offce. MEST has this part-school-part-work thing going on...</p>
+			</div> -->
+		</div>
+	</div>
+	{{/each}}
 </template>

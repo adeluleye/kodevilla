@@ -6,9 +6,6 @@
 				
 				<div>
 			<!-- <div class="card-image waves-effect waves-block waves-light">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 				{{#with FS.GetFile 'images' picture}}
 				<img class="activator blg-img" src="{{url}}" alt="">
@@ -19,7 +16,6 @@
 				<hr>
 				<div>
 
-<<<<<<< HEAD
 					<div class="card-content">
 						<h2><span class="card-title activator grey-text text-darken-4 webly">{{title}}</span></h2>
 						<hr>
@@ -38,71 +34,16 @@
 
 					</div>
 
-=======
-					<p>{{description}}</p>
->>>>>>> parent of d020953... comment section and display working fine
-=======
 
-				{{#with FS.GetFile 'images' picture}}
-				<img class="activator blg-img" src="{{url}}" alt="">
-				{{/with}}
-			</div> -->
-			<div class="card-content">
-				<h2><span class="card-title activator grey-text text-darken-4 webly">{{title}}</span></h2>
-				<hr>
-				<div>
-
-					<p>{{description}}</p>
->>>>>>> parent of d020953... comment section and display working fine
-=======
-
-				{{#with FS.GetFile 'images' picture}}
-				<img class="activator blg-img" src="{{url}}" alt="">
-				{{/with}}
-			</div> -->
-			<div class="card-content">
-				<h2><span class="card-title activator grey-text text-darken-4 webly">{{title}}</span></h2>
-				<hr>
-				<div>
-
-					<p>{{description}}</p>
->>>>>>> parent of d020953... comment section and display working fine
-=======
-
-				{{#with FS.GetFile 'images' picture}}
-				<img class="activator blg-img" src="{{url}}" alt="">
-				{{/with}}
-			</div> -->
-			<div class="card-content">
-				<h2><span class="card-title activator grey-text text-darken-4 webly">{{title}}</span></h2>
-				<hr>
-				<div>
-
-					<p>{{description}}</p>
->>>>>>> parent of d020953... comment section and display working fine
 				</div>
 
-				<hr>
-				<h3 class="webly">Read Me</h3>
-				<div>
-					<p>{{readMe}}</p>
-				</div>
-				
-				
 			</div>
-			<!-- <div class="card-reveal">
-				<span class="card-title grey-text text-darken-4">My First Day at Mest <i class="mdi-navigation-close right"></i></span>
-				<p>So MEST, this is me, usually we write compositions of our first day at school -this is more like my first day in the offce. MEST has this part-school-part-work thing going on...</p>
-			</div> -->
 		</div>
-		
+		<div class="images col-md-4">
+			{{#with getImgSrc picture}}
+			<img class="pic" src="{{url}}" >
+			{{/with}}
+		</div>
 	</div>
-</div>
-<div class="images col-md-4">
-	{{#with getImgSrc picture}}
-	<img class="pic" src="{{url}}" >
 	{{/with}}
-</div>
-</div>
-{{/with}}
 </template>

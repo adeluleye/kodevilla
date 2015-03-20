@@ -29,11 +29,12 @@ Router.route('/projects/details/:_id', function(){
 	this.render('details');
 }, {
 	name:'details',
-
+	
 	data: function(){
 		var _id=this.params._id;
 		return{
-			projects: Projects.findOne(_id)
+			projects: Projects.findOne(_id),
+			comments: Comments.find({project: _id}).fetch()
 		}
 	}
 }
@@ -63,7 +64,8 @@ Router.route('/home', function(){
 	data: function(){
 
 		return {
-			projects: Projects.find().fetch()
+			projects: Projects.find().fetch(),
+			test: 'test_value'
 		}
 	}
 
@@ -117,10 +119,10 @@ Router.route('/projects/:category/', function(){
 // 	});
 // });
 
-Router.onBeforeAction(function() {
-	if (! Meteor.userId()) {
-		this.render('home');
-	} else {
-		this.next();
-	}
-});
+// Router.onBeforeAction(function() {
+// 	if (! Meteor.userId()) {
+// 		this.render('home');
+// 	} else {
+// 		this.next();
+// 	}
+// });

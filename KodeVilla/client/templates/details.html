@@ -5,16 +5,6 @@
 			<div class="col-md-8">
 				
 				<div>
-			<!-- <div class="card-image waves-effect waves-block waves-light">
-
-				{{#with FS.GetFile 'images' picture}}
-				<img class="activator blg-img" src="{{url}}" alt="">
-				{{/with}}
-			</div> -->
-			<div class="card-content">
-				<h2><span class="card-title activator grey-text text-darken-4 webly">{{title}}</span></h2>
-				<hr>
-				<div>
 
 					<div class="card-content">
 						<h2><span class="card-title activator grey-text text-darken-4 webly">{{title}}</span></h2>
@@ -30,10 +20,9 @@
 							<p>{{readMe}}</p>
 						</div>
 						<hr>
-						<button class="button" src="{{location}}">View Source code</button>
+						<button><a href="{{location}}">View Source code</a></button>
 
 					</div>
-
 
 				</div>
 
@@ -44,6 +33,22 @@
 			<img class="pic" src="{{url}}" >
 			{{/with}}
 		</div>
+		<br>
+		<br>
+		<br>
+		
+
 	</div>
 	{{/with}}
+	<div class="col-md-6 text-center">
+		<h3 class="webly">Leave a comment</h3>
+		{{> quickForm id="insertApplication" collection="Comments" type="insert"}}
+		{{#each comments}}
+		<div class="panel panel-default">
+			<div class="panel-body">
+				{{description}}
+			</div>
+		</div>
+		{{/each}}
+	</div>
 </template>

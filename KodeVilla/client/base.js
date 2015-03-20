@@ -1,5 +1,5 @@
 Meteor.startup(function () {
-    AccountsEntry.config({
+	AccountsEntry.config({
       dashboardRoute: '/home'      // mandatory - path to redirect to after successful sign-i
-    });
   });
+});

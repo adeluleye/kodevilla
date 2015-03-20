@@ -54,6 +54,24 @@ nav ul {
 body{
 	text-align: left;
 }
+
+.images{
+	margin-top: -150px;
+	border:1px solid #888;
+	max-height: 300px;
+	width:200px;
+	float: right;
+	vertical-align: middle;
+	box-shadow: 10px 10px 5px #e5e5e5;
+	padding: 0px;
+
+}
+
+img .pic{
+	height: 300px;
+	width:300px;
+}
+
 .card-holder{
 	margin: 20px;
 }

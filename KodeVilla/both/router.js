@@ -12,6 +12,8 @@ Router.configure({
 });
 
 // ============================================== routes ========================================================================
+// route to sign-in page
+
 
 //  route one basic
 Router.route ('/', function(){
@@ -21,6 +23,22 @@ Router.route ('/', function(){
   layoutTemplate:"index"
 
 });
+
+
+Router.route('/projects/details/:_id', function(){
+	this.render('details');
+}, {
+	name:'details',
+
+	data: function(){
+		var _id=this.params._id;
+		return{
+			projects: Projects.findOne(_id)
+		}
+	}
+}
+);
+
 Router.route ('/allmails', function(){
 	this.render('allmails');
 	
@@ -33,11 +51,14 @@ Router.route ('/allmails', function(){
 		}
 	}
 });
+
+
 //  route one basic
-Router.route ('/home', function(){
+Router.route('/home', function(){
 	this.render('home');
 	
-}, {
+}, 
+{	
 	name: 'home',
 	data: function(){
 
@@ -45,7 +66,9 @@ Router.route ('/home', function(){
 			projects: Projects.find().fetch()
 		}
 	}
+
 });
+
 Router.route('/projects/:category/', function(){
 	this.render('projectsCategory');          // Render the same template as '/projects' route
 }, {
@@ -94,3 +117,10 @@ Router.route('/projects/:category/', function(){
 // 	});
 // });
 
+Router.onBeforeAction(function() {
+	if (! Meteor.userId()) {
+		this.render('home');
+	} else {
+		this.next();
+	}
+});

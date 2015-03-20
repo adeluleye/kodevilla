@@ -19,3 +19,7 @@ aldeed:autoform@=4.2.2
 cfs:standard-packages@=0.0.0
 yogiben:autoform-file@=0.2.0
 twbs:bootstrap
+accounts-base
+accounts-password
+joshowens:accounts-entry
+accounts-ui

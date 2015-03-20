@@ -8,13 +8,3 @@
 
  	}
  });
-
- Template.maintemplate.events({
- 	'click #submit-close': function (e, t) {
-    // ...
-    // e.preventDefault();
-
-    $('#btn-submit').modal('hide');
-
-}
-});

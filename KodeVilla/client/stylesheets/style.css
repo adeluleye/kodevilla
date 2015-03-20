@@ -31,6 +31,14 @@ h1, h2 {
 	line-height: 50px;
 }
 
+.action {
+	margin-top: 10px;
+	font-size: 55px;
+	font-weight: 100;
+	color: #555;
+	line-height: 50px;
+}
+
 h3 {
 	font-size: 22px;
 	font-weight: 300;

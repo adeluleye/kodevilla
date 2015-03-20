@@ -72,7 +72,7 @@ Router.route('/home', function(){
 });
 
 Router.route('/projects/:category/', function(){
-	this.render('projectsCategory');          // Render the same template as '/projects' route
+	this.render('home');          // Render the same template as '/projects' route
 }, {
 	name: 'projectsCategory',
 

@@ -11,7 +11,7 @@
 
 
  Template.maintemplate.helpers({
- 	user: function () {
+ 	currentUser: function () {
  		if(Meteor.user()){
  			return true
  		} else{

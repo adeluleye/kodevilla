@@ -121,7 +121,7 @@ div.card:hover div.card-reveal{
 	display: block;
 }
 .btn-primary:not(.btn-link):not(.btn-flat) {
-	background-color:#FF5740;
+	background-color:#FF5722;
 	color: rgba(255, 255, 255, 0.84);
 	border-color: #fff
 }
@@ -147,3 +147,21 @@ div.card:hover div.card-reveal{
 hr {
 	margin-top: 5px;
 }
+.upload{
+	
+	margin-left: -180px;
+}
+ul.navbar-nav {
+	font-size: 16px;
+	color: #fff;
+	margin-top: -50px;
+}
+input[type="text"],
+textarea,
+textarea.form-control {
+	border:solid 1px #ccc;
+}
+.description{
+	height: 135px;
+}
+
